@@ -33,11 +33,14 @@ under the ODbL.
 | Boundary geometry | OpenStreetMap contributors | as consumed by the builder release below |
 | Boundary builder | `evansiroky/timezone-boundary-builder` | release `2025c`, commit `932baf12f1df6fa0f2c387ba96e54e9cd5dfca26`, IANA tz release `2025c` |
 | Geobuf packaging | `evansiroky/node-geo-tz` | commit `ed663141f27ffa7057c3cfd1a1c7438150631e9f` ("Update to 2025c data", 2026-01-13) |
-| This mirror | `brightfieldworks/geo-tz` | data copied unchanged; recorded in `data/SOURCE.json` |
+| PHP port | `mamluk/geo-tz` | tag `0.2.1` (`c4b00c340870e20b505f347a271100ffe38f48f8`); its `scripts/update-data.php` fetched the files and wrote `data/SOURCE.json` |
+| This mirror | `brightfieldworks/geo-tz` | `mamluk/geo-tz` with data unchanged |
 
-Every file under `data/` in this revision is byte-identical to the file at the
-same path in `evansiroky/node-geo-tz` at
-`ed663141f27ffa7057c3cfd1a1c7438150631e9f`. SHA-256 of each:
+The six timezone data files under `data/` (`*.geo.dat` and `*.index.json`) are
+byte-identical to the files at the same paths in `evansiroky/node-geo-tz` at
+`ed663141f27ffa7057c3cfd1a1c7438150631e9f`. `data/SOURCE.json` is not an
+upstream file: the `mamluk/geo-tz` updater generated it to record that commit.
+SHA-256 of each:
 
 | File | SHA-256 |
 | --- | --- |
